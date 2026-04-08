@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>For My Love ❤️</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+.hidden {
+  display: none;
+}
+
+/* 💌 Letter animation */
+.letter {
+  background: white;
+  color: #ff6f91;
+  padding: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  animation: popUp 0.6s ease;
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5) translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+/* 💕 Floating hearts */
+.heart-float {
+  position: fixed;
+  color: #ff6f91;
+  font-size: 20px;
+  animation: floatUp 2s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-150px);
+    opacity: 0;
+  }
+}
+</style>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffd6e0, #d6f0ff, #e6d6ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    text-align: center;
+    color: #555;
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .container {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 3em;
+    color: #ff8fab;
+  }
+
+  p {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  /* 💖 Cute glass card */
+  .letter {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    animation: fadeIn 0.8s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* 🌸 Cute pastel button */
+  button {
+    background: linear-gradient(135deg, #ffb3c6, #cdb4db);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1em;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(200, 150, 255, 0.3);
+  }
+
+  button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(200, 150, 255, 0.5);
+  }
+
+  /* 💕 floating hearts */
+  .heart-float {
+    position: fixed;
+    font-size: 18px;
+    animation: floatUp 3s linear forwards;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-200px); opacity: 0; }
+  }
+</style>
+</head>
+<script>
+  function showMessage() {
+    document.getElementById("secret").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
+<canvas id="stars"></canvas>
+<div class="bokeh">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+<body>
+  <div class="fireflies"></div>
+  <div class="container">
+    <h1>Hi Baby 💕</h1>
+    <div class="heart">❤️</div>
+    <p>
+      I just wanted to remind you how much you mean to me.  
+      You make my days brighter, my smile bigger, and my heart happier.
+    </p>
+
+    <button onclick="showMessage()">Click me 💌</button>
+
+  <div id="secret" class="hidden">
+  <div class="letter">
+    <span id="typed-text"></span>
+    <span class="cursor">|</span>
+  </div>
+</div>
+<style>
+.cursor {
+  display: inline-block;
+  background-color: #ff8fab;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+</style>
+  <script>
+  function showMessage() {
+    const msg = document.getElementById("secret");
+    msg.style.display = "block";
+
+    // 💕 create floating hearts
+    for (let i = 0; i < 6; i++) {
+      let heart = document.createElement("div");
+      heart.className = "heart-float";
+      heart.innerHTML = "💖";
+
+      heart.style.left = Math.random() * window.innerWidth + "px";
+      heart.style.top = window.innerHeight - 50 + "px";
+
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 2000);
+    }
+  }
+</script>
+<script>
+const message = "💌 Hi baby, i wanna say im very sorry and I LOVE YOU!! selfish man ko usahay and masakitan pod tika, im very sorry about yesterday i made a mistake and i regret that so much.. i doubt myself kay sige nakag kasakitan gikan lang sa akoang pagka overthinker, gusto ko mobawi nimo pero bawalan paman ta and i cant really do anything special para lang ma forgive ko nimo sa akong gibuhat sa imoha im very sorry baby cause i dont trust myself and nadamay ka mag bag o nako baby, im really sorry babyyy:( sorry gyud sa tanan babyy, sorry kaayo kay wala koy trust nimo, mahadlok lang gyud ko baby nga mawala ka or magbulag ta kay dina nako kaya pag wala ka, pasensiya kaayo baby:(( sa tinood lang gi mahal nagyud tika baby wala nakoy gipangita lain pa ikaw lang, salamat kaayo baby kay imo pod kung gimahal maskig diko deserving sa imong love, salamat kaayo kay imo japon ko gi forgive, karon pako ka feel nga nagmahal ko sa usa ka tao nga gi mahal pod ko, thank you babyy, thank you very much, ILOVEYOU , I cant explain my love for you baby, Thank you babyy im grateful to have you babyy";
+let index = 0;
+
+function typeText() {
+  const textElement = document.getElementById("typed-text");
+  if (index < message.length) {
+    textElement.innerHTML += message.charAt(index);
+    index++;
+    setTimeout(typeText, 70); // typing speed in ms
+  }
+}
+
+function showMessage() {
+  const msg = document.getElementById("secret");
+  msg.style.display = "block";
+  typeText();
+
+  // Optional: floating hearts
+  for (let i = 0; i < 6; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart-float";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * window.innerWidth + "px";
+    heart.style.top = window.innerHeight - 50 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 2000);
+  }
+}
+</script>
+<style>
+/* 📱 Mobile responsive adjustments */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 30px 15px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  p {
+    font-size: 1em;
+    max-width: 90%;
+    margin: 15px auto;
+  }
+
+  .letter {
+    width: 90%;
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  button, #themeBtn {
+    padding: 12px 20px;
+    font-size: 0.9em;
+    border-radius: 25px;
+  }
+
+  .heart-float {
+    font-size: 16px;
+  }
+}
+</style>
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #2b2d42, #3a3d5c, #5c5470);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  text-align: center;
+  color: #eee;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #cdb4db; /* pastel purple text */
+}
+
+p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* 💌 Glass-style love letter */
+.letter {
+  background: rgba(40, 40, 60, 0.7);
+  color: #f8c8dc;
+  padding: 25px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 20px;
+  animation: fadeIn 0.8s ease;
+  width: 80%; /* for mobile responsiveness */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🌸 Buttons */
+button {
+  background: linear-gradient(135deg, #6a4c93, #b8c0ff);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 1em;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(200, 150, 255, 0.3);
+}
+
+button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(200, 150, 255, 0.5);
+}
+
+/* 💕 Floating hearts */
+.heart-float {
+  position: fixed;
+  font-size: 18px;
+  animation: floatUp 3s linear forwards;
+  color: #ff8fab;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-200px); opacity: 0; }
+}
+
+/* 💌 Typing animation */
+.cursor {
+  display: inline-block;
+  background-color: #f8c8dc;
+  width: 2px;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* 📱 Mobile adjustments */
+@media only screen and (max-width: 480px) {
+  body { font-size: 16px; }
+  .container { padding: 30px 15px; }
+  h1 { font-size: 2em; }
+  p { font-size: 1em; max-width: 90%; margin: 15px auto; }
+  .letter { width: 90%; padding: 15px; font-size: 1em; }
+  button { padding: 12px 20px; font-size: 0.9em; border-radius: 25px; }
+  .heart-float { font-size: 16px; }
+}
+</style>
+<style>
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* behind all content */
+}
+</style>
+<script>
+const canvas = document.getElementById('stars');
+const ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const stars = [];
+const numStars = 150; // more = denser sky
+
+for (let i = 0; i < numStars; i++) {
+  stars.push({
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    radius: Math.random() * 2,
+    alpha: Math.random(),
+    delta: Math.random() * 0.02
+  });
+}
+
+function animateStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let star of stars) {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255,255,255,${star.alpha})`;
+    ctx.fill();
+    star.alpha += star.delta;
+    if(star.alpha <= 0 || star.alpha >= 1) star.delta *= -1; // twinkle
+  }
+  requestAnimationFrame(animateStars);
+}
+
+animateStars();
+
+// Adjust canvas size on window resize
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
+</script>
+<audio id="bgMusic" loop>
+  <source src="Kalapastangan.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<button onclick="toggleMusic()" id="musicBtn">🎵 Play Music</button>
+<script>
+const music = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
+
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+    musicBtn.innerHTML = "🔇 Pause Music";
+  } else {
+    music.pause();
+    musicBtn.innerHTML = "🎵 Play Music";
+  }
+}
+</script>
+
+</body>
+</html>

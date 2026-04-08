@@ -1,0 +1,133 @@
+button {
+  background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 111, 145, 0.4);
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 111, 145, 0.6);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+#musicBtn {
+  background: linear-gradient(135deg, #ffb3c6, #cdb4db);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(200, 150, 255, 0.3);
+}
+
+#musicBtn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(200, 150, 255, 0.5);
+}
+.sparkle {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  animation: sparkleMove 3s linear infinite;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes sparkleMove {
+  0% { transform: translateY(0) translateX(0); opacity: 1; }
+  100% { transform: translateY(-150px) translateX(30px); opacity: 0; }
+}
+body {
+  background: linear-gradient(135deg, #2b2d42, #3a3d5c, #5c5470, #9f86c0);
+  background-size: 800% 800%;
+  animation: gradientShift 20s ease infinite;
+  position: relative;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.bokeh div {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 182, 193, 0.15);
+  animation: floatBokeh 30s linear infinite;
+  filter: blur(20px);
+}
+
+.bokeh div:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  left: 20%;
+  animation-delay: 0s;
+}
+
+.bokeh div:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  left: 70%;
+  animation-delay: 5s;
+}
+
+.bokeh div:nth-child(3) {
+  width: 180px;
+  height: 180px;
+  top: 75%;
+  left: 30%;
+  animation-delay: 10s;
+}
+
+@keyframes floatBokeh {
+  0% { transform: translateY(0) translateX(0); }
+  100% { transform: translateY(-20px) translateX(15px); }
+}
+.fireflies {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  z-index: 0; /* Make sure it’s above background but behind content */
+}
+
+.firefly {
+  position: absolute;
+  background: radial-gradient(circle, #ffef94, #f1c40f, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: floatUpGlow linear infinite;
+}
+
+@keyframes floatUpGlow {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-200px) translateX(20px);
+    opacity: 0;
+  }
+}
